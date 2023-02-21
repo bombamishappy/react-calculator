@@ -3,12 +3,7 @@
 * {
     padding: 0;
     margin: 0;
-    box-sizing: border-box;
-    font-family: 'Prompt', sans-serif;
-    -webkit-text-stroke: 1.8px black;
-    color: #fff;
-   
-    
+    box-sizing: border-box;   
 }
 
 body {
@@ -47,22 +42,35 @@ body {
     border: 2px solid black;
 }
 
-.screen input {
-    width: 500px;   
+ .screen form input {
+    width: 93%;
+    height: 159px;
+    margin: 4px 13px;
+    border: 2px solid black;
+    border-radius: 37px;
 }
 
-#input-field {
-    width: 100%;
-    height: 115px;
-    margin: 10px 13px;
-    opacity: 0;
-    /*dont forget opacity 0*/
-    
+form input {
+    font-size: 25px;
+    text-align: right;
+    padding-right: 15px;
+    letter-spacing: 1.5px;
 }
+
+button #clear {
+color: black;
+}
+
+button #result {
+    color: coral;
+}
+
+
 
 .fa-solid {
     color: #fff;
     font-size: 32px;  
+    border: 1.8px solid black;
 }
 
 
@@ -73,7 +81,7 @@ button {
     cursor: pointer;
     border-radius: 43px;
     box-shadow: 0px 3px 0px 0px hsl(0, 0%, 67%);
-    margin: 10px 10px;
+    margin: 11px 11px;
     font-weight: 500;
     font-size: 36px;   
     text-align: center;
@@ -84,25 +92,26 @@ button {
 
 .button {
     display: flex;
-    width: 453px;
+    width: 458px;
     border-radius: 37px;
     border: 2.2px solid black; 
     background-color: #D9D9D9; 
-    padding: -2px 9px;
-    margin: 19px 16px;
+    padding: 2px -1px;
+    margin: 14px 13px;
     
 }
 
 .left-side {
   display: flex;
-  width: 391px;
+  
   flex-flow: wrap;
 }
 
 .right-side {
   display: flex;
-  width: 114px;
+  width: 140px;
   flex-flow: wrap;
+  padding: 3px;
   border-radius: 37px 37px 37px 37px;
   background-color: #A0BFC7;
   box-shadow: -3px 0px 3px 0px grey;
@@ -110,28 +119,46 @@ button {
 
 .top-symbol {
     background-color: hsl(191, 50%, 36%);
+    -webkit-text-stroke: 1.8px black;
+    color: #fff;
+    font-family: 'Prompt', sans-serif;
     
    
 }
 
 .number {
-    background-color: hsl(45, 75%, 68%);   
+    background-color: hsl(45, 75%, 68%);  
+    -webkit-text-stroke: 1.8px black;
+    color: #fff; 
+    font-family: 'Prompt', sans-serif;
 }    
 
 .symbol {
-    background-color: hsl(176, 100%, 23%);   
+    background-color: hsl(176, 100%, 23%);
+    -webkit-text-stroke: 1.8px black;
+    color: #fff;   
+    font-family: 'Prompt', sans-serif;
+    
 }
 
-#right-side {
-    width: 100px;
-}
+
 
 #dot {
     letter-spacing: 4px;
 }
 
+.del {
+    border-radius: 43px 0 0 43px;
+}
 
 
+input:focus,
+input:active,
+button:focus,
+button:active {
+
+    outline: none;
+}
 
 
 
