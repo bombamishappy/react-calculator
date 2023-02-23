@@ -7,13 +7,26 @@ import './App.css'
 function App() {
   const [result, setResult] = useState("")
 
-  const handleClick = (e) => {
-    setResult(result.concat(e.target.name));
-
-
-
-
+  function handleClick(object) {
+    if (result === "0") {
+      setResult(() => "")
+    }
+    setResult((oldResult) => oldResult.concat(object.target.name))
   }
+
+  function delAll() {
+    setResult(() => "0")
+  }
+
+  function delOne() {
+    if (result.length <= 1) {
+      setResult(() => "0")
+      return
+    }
+    setResult((oldResult) => oldResult.slice(0, -1))
+  }
+
+
   return (
     <div class="container">
       <div class="switch-mode">
@@ -29,7 +42,7 @@ function App() {
         <div class="button">
           <div class="left-side">
             <button onClick={handleClick} class="top-symbol">%</button>
-            <button onClick={handleClick} id="clear" class="top-symbol">AC</button>
+            <button onClick={delAll} id="clear" class="top-symbol">AC</button>
             <button onClick={handleClick} class="top-symbol" id="result">=</button>
             <button name="1" onClick={handleClick} class="number">1</button>
             <button name="2" onClick={handleClick} class="number">2</button>
@@ -45,7 +58,7 @@ function App() {
             <button name="." onClick={handleClick} class="number">.</button>
           </div>
           <div class="right-side">
-            <button class="del top-symbol" id="right-side" ><FontAwesomeIcon icon={faSquareXmark} /></button>
+            <button onClick={delOne} class="del top-symbol" id="right-side" ><FontAwesomeIcon icon={faSquareXmark} /></button>
             <button name="+" onClick={handleClick} class="symbol" id="right-side">+</button>
             <button name="-" onClick={handleClick} class="symbol" id="right-side">&ndash;</button>
             <button name="*" onClick={handleClick} class="symbol" id="right-side">&times;</button>
