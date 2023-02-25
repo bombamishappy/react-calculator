@@ -42,20 +42,36 @@ body {
     border: 2px solid black;
 }
 
- .screen form input {
-    width: 93%;
+ .screen {
+    width: 458px;
     height: 159px;
     margin: 4px 13px;
     border: 2px solid black;
     border-radius: 37px;
+    background-color: #fff;
 }
 
-form input {
-    font-size: 25px;
-    text-align: right;
-    padding-right: 15px;
-    letter-spacing: 1.5px;
+.result-one {
+    color: LightGray;
+    font-size: 20px;
+    width: 410px;
+   margin-top: 55px;
+   text-align: right;
+   font-family: 'Prompt', sans-serif;
+   
 }
+
+
+.result-two {
+    color: gray;
+    font-size: 25px;
+    width: 410px;
+   text-align: right;
+   
+   font-family: 'Prompt', sans-serif;
+}
+
+
 
 button #clear {
 color: black;
